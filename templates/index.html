@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>To-Do List</h1>
+    <form method="post" action="/">
+        <input type="text" name="task" placeholder="Enter new task">
+        <input type="submit" value="Add">
+    </form>
+    <ul>
+        {% for task in todos %}
+        <li>{{ task }}</li>
+        {% endfor %}
+    </ul>
+	<body>
+    <h1>Welcome to the Home Page</h1>
+    <a href="{{ url_for('upload_file') }}">Go to Upload Page</a>
+    <a href="{{ url_for('gallery') }}">Go to Gallery Page</a>
+  </body>
+</body>
+</html>
